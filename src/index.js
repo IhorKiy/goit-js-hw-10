@@ -32,14 +32,13 @@ function render(input) {
       ref.nameCountry.innerHTML = markup;
       ref.infoCountry.innerHTML = '';
     } else {
-      console.log(countries);
-
+      
       const { name, flags, capital, population, languages } = countries[0];
       const languagesArray = Object.values(languages).join(', ');
 
-      markup = `<img width ="80" height = "50" src='${flags.svg}' alt='${name.official}'><p>${name.official}</p><p>${capital}</p><p>${population}</p><p>${languagesArray}</p>`;
+      markup1 = `<img width ="80" height = "50" src='${flags.svg}' alt='${name.official}'><p>${name.official}</p><p>${capital}</p><p>${population}</p><p>${languagesArray}</p>`;
       ref.nameCountry.innerHTML = '';
-      ref.infoCountry.innerHTML = markup;
+      ref.infoCountry.innerHTML = markup1;
     }
   });
 }
