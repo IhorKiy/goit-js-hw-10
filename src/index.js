@@ -23,7 +23,7 @@ function render(input) {
     return;
   }
   fetchCountries(inpt).then(countries => {
-    if (countries.length > 1) {
+    if (countries &&countries.length > 1) {
       let markup = '';
       markup = countries.map(
         ({ name: { official }, flags: { svg } }) =>
@@ -40,5 +40,7 @@ function render(input) {
       ref.nameCountry.innerHTML = '';
       ref.infoCountry.innerHTML = markup1;
     }
-  });
+  }).catch(error => {
+    console.log(error)
+  })
 }

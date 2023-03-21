@@ -13,15 +13,15 @@ export async function fetchCountries(name) {
     })
 
     .then(response => {
-        if (response.length > 10) {
+        if (response &&response.length > 10) {
         Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name'
         );
         return;
       }
       return response;
-    });
-  // .catch(error => {
-  //   console.log(error);
-  // });
+    })
+  .catch(error => {
+    console.log(error);
+  });
 }
