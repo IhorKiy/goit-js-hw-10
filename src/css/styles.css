@@ -20,17 +20,24 @@ body {
   margin-bottom: 16px;
 }
 
+li{
+  display: flex;
+ align-items: center ;
+}
 
 .country-list{
-text-align: justify;
-
-  list-style-type: none;
+     list-style-type: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 600;
 }
 .country-info{
+  margin-left: 80px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 font-size: 20px;
 font-weight: 600;
+}
+
+.name{
+    margin: 10px;
 }

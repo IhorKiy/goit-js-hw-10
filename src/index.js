@@ -28,7 +28,7 @@ function render(input) {
       let markup = '';
       markup = countries.map(
         ({ name: { official }, flags: { svg } }) =>
-          `<li> <img width ="50" height = "30" src='${svg}' alt='${official}'>    ${official}   </li>`
+          `<li > <img width ="50" height = "30" src='${svg}' alt='${official}'><p class="name">${official}</p></li>`
       );
       ref.nameCountry.innerHTML = markup;
       ref.infoCountry.innerHTML = '';
