@@ -11,8 +11,7 @@ const ref = {
 };
 
 ref.input.addEventListener(
-  'input',
-  debounce(render, [(wait = DEBOUNCE_DELAY)], [(options = {})])
+  'input', debounce(render, DEBOUNCE_DELAY)
 );
 
 function render(input) {
