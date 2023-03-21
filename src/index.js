@@ -32,7 +32,7 @@ function render(input) {
       ref.nameCountry.innerHTML = markup;
       ref.infoCountry.innerHTML = '';
     } else {
-      
+      let markup1 = '';
       const { name, flags, capital, population, languages } = countries[0];
       const languagesArray = Object.values(languages).join(', ');
 
@@ -43,4 +43,4 @@ function render(input) {
   }).catch(error => {
     console.log(error)
   })
-}
+} 
